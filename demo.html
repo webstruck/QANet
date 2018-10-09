@@ -18,6 +18,11 @@
                     console.log(json.answer);
                     var ans = document.getElementById("answer");
                     ans.innerHTML = json.answer;
+                    var textarea = document.getElementById("passage");
+                    var index = textarea.value.indexOf(json.answer);
+                    if (index >= 0)
+                        textarea.focus();
+                    textarea.setSelectionRange(index, index + json.answer.length);
                 }
             };
             var params = JSON.stringify({ "question": question, "passage": passage });
