@@ -279,7 +279,9 @@ def prepro(config):
         config.test_file, "test", word_counter, char_counter)
 
     word_emb_file = config.fasttext_file if config.fasttext else config.glove_word_file
+    print("word_emb_file: {}".format(word_emb_file))
     char_emb_file = config.glove_char_file if config.pretrained_char else None
+    print("char_emb_file: {}".format(char_emb_file))
     char_emb_size = config.glove_char_size if config.pretrained_char else None
     char_emb_dim = config.glove_dim if config.pretrained_char else config.char_dim
 
