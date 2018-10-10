@@ -14,13 +14,13 @@ wget http://nlp.stanford.edu/data/glove.840B.300d.zip -O $GLOVE_DIR/glove.840B.3
 unzip $GLOVE_DIR/glove.840B.300d.zip -d $GLOVE_DIR
 
 # Download Glove Character Embedding
-# wget https://raw.githubusercontent.com/minimaxir/char-embeddings/master/glove.840B.300d-char.txt -O $GLOVE_DIR/glove.840B.300d-char.txt
+wget https://raw.githubusercontent.com/minimaxir/char-embeddings/master/glove.840B.300d-char.txt -O $GLOVE_DIR/glove.840B.300d-char.txt
 
 # Download fasttext
-# FASTTEXT_DIR=~/data/fasttext
-# mkdir -p $FASTTEXT_DIR
-# wget https://s3-us-west-1.amazonaws.com/fasttext-vectors/wiki-news-300d-1M.vec.zip -O $FASTTEXT_DIR/wiki-news-300d-1M.vec.zip
-# unzip $FASTTEXT_DIR/wiki-news-300d-1M.vec.zip -d $FASTTEXT_DIR
+FASTTEXT_DIR=~/data/fasttext
+mkdir -p $FASTTEXT_DIR
+wget https://s3-us-west-1.amazonaws.com/fasttext-vectors/wiki-news-300d-1M.vec.zip -O $FASTTEXT_DIR/wiki-news-300d-1M.vec.zip
+unzip $FASTTEXT_DIR/wiki-news-300d-1M.vec.zip -d $FASTTEXT_DIR
 
 # Download Spacy language models
-# python3 -m spacy download en
+python3 -m spacy download en
